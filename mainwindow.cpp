@@ -262,6 +262,7 @@ void MainWindow::setDefaultSettings() {
     ui->label_5->setStyleSheet("color: #FFFFFF;");
     ui->label_6->setStyleSheet("color: #FFFFFF;");
     ui->label_7->setStyleSheet("color: #FFFFFF;");
+    
     vec.push_back(ui->plainTextEdit_Num1_1);
     vec.push_back(ui->plainTextEdit_Num1_2);
     vec.push_back(ui->plainTextEdit_Num1_3);
@@ -276,20 +277,21 @@ void MainWindow::setDefaultSettings() {
     vec.push_back(ui->plainTextEdit_Num2_6);
     currentVecIndex = 0;
     currentPlainText = vec[currentVecIndex];
-    setOutputStyle();
     currentPlainText->setStyleSheet(outputColorActive);
-    setArrowsStatus();
+
     setSignStyle();
     setNumStyle();
     setOutputStyle();
 
     ui->label_Sign->setStyleSheet(signColor);
+    ui->label_answerSign->setStyleSheet(signColor);
     ui->plainTextEdit_Answer_1->setStyleSheet(outputColor);
     ui->label->setStyleSheet("color: #FFFFFF;");
     currentPlainText->setStyleSheet(outputColorActive);
 
     ui->label->setAlignment(Qt::AlignCenter);
     ui->label_Sign->setAlignment(Qt::AlignCenter);
+    ui->label_answerSign->setAlignment(Qt::AlignCenter);
 
     setArrowsStatus();
 }
@@ -359,6 +361,18 @@ void MainWindow::unblockRight() {
 }
 
 void MainWindow::setArrowsStatus() {
+    ui->plainTextEdit_Num1_1->setPlainText("0");
+    ui->plainTextEdit_Num1_2->setPlainText("0");
+    ui->plainTextEdit_Num1_3->setPlainText("0");
+    ui->plainTextEdit_Num1_4->setPlainText("0");
+    ui->plainTextEdit_Num1_5->setPlainText("0");
+    ui->plainTextEdit_Num1_6->setPlainText("0");
+    ui->plainTextEdit_Num2_1->setPlainText("0");
+    ui->plainTextEdit_Num2_2->setPlainText("0");
+    ui->plainTextEdit_Num2_3->setPlainText("0");
+    ui->plainTextEdit_Num2_4->setPlainText("0");
+    ui->plainTextEdit_Num2_5->setPlainText("0");
+    ui->plainTextEdit_Num2_6->setPlainText("0");
     currentPlainText = vec[currentVecIndex];
     currentPlainText->setStyleSheet(outputColorActive);
     switch (currentVecIndex)
@@ -392,6 +406,7 @@ void MainWindow::on_plainTextEdit_Num1_1_selectionChanged() {
     setOutputStyle();
     currentPlainText->setStyleSheet(outputColorActive);
     setArrowsStatus();
+    currentPlainText->setPlainText("");
 }
 void MainWindow::on_plainTextEdit_Num1_2_selectionChanged() {
     currentVecIndex = 1;
@@ -399,6 +414,7 @@ void MainWindow::on_plainTextEdit_Num1_2_selectionChanged() {
     setOutputStyle();
     currentPlainText->setStyleSheet(outputColorActive);
     setArrowsStatus();
+    currentPlainText->setPlainText("");
 }
 void MainWindow::on_plainTextEdit_Num1_3_selectionChanged() {
     currentVecIndex = 2;
@@ -406,6 +422,7 @@ void MainWindow::on_plainTextEdit_Num1_3_selectionChanged() {
     setOutputStyle();
     currentPlainText->setStyleSheet(outputColorActive);
     setArrowsStatus();
+    currentPlainText->setPlainText("");
 }
 void MainWindow::on_plainTextEdit_Num1_4_selectionChanged() {
     currentVecIndex = 3;
@@ -413,6 +430,7 @@ void MainWindow::on_plainTextEdit_Num1_4_selectionChanged() {
     setOutputStyle();
     currentPlainText->setStyleSheet(outputColorActive);
     setArrowsStatus();
+    currentPlainText->setPlainText("");
 }
 void MainWindow::on_plainTextEdit_Num1_5_selectionChanged() {
     currentVecIndex = 4;
@@ -420,6 +438,7 @@ void MainWindow::on_plainTextEdit_Num1_5_selectionChanged() {
     setOutputStyle();
     currentPlainText->setStyleSheet(outputColorActive);
     setArrowsStatus();
+    currentPlainText->setPlainText("");
 }
 void MainWindow::on_plainTextEdit_Num1_6_selectionChanged() {
     currentVecIndex = 5;
@@ -427,6 +446,7 @@ void MainWindow::on_plainTextEdit_Num1_6_selectionChanged() {
     setOutputStyle();
     currentPlainText->setStyleSheet(outputColorActive);
     setArrowsStatus();
+    currentPlainText->setPlainText("");
 }
 
 void MainWindow::on_plainTextEdit_Num2_1_selectionChanged() {
@@ -435,6 +455,7 @@ void MainWindow::on_plainTextEdit_Num2_1_selectionChanged() {
     setOutputStyle();
     currentPlainText->setStyleSheet(outputColorActive);
     setArrowsStatus();
+    currentPlainText->setPlainText("");
 }
 void MainWindow::on_plainTextEdit_Num2_2_selectionChanged() {
     currentVecIndex = 7;
@@ -442,6 +463,7 @@ void MainWindow::on_plainTextEdit_Num2_2_selectionChanged() {
     setOutputStyle();
     currentPlainText->setStyleSheet(outputColorActive);
     setArrowsStatus();
+    currentPlainText->setPlainText("");
 }
 void MainWindow::on_plainTextEdit_Num2_3_selectionChanged() {
     currentVecIndex = 8;
@@ -449,6 +471,7 @@ void MainWindow::on_plainTextEdit_Num2_3_selectionChanged() {
     setOutputStyle();
     currentPlainText->setStyleSheet(outputColorActive);
     setArrowsStatus();
+    currentPlainText->setPlainText("");
 }
 void MainWindow::on_plainTextEdit_Num2_4_selectionChanged() {
     currentVecIndex = 9;
@@ -456,6 +479,7 @@ void MainWindow::on_plainTextEdit_Num2_4_selectionChanged() {
     setOutputStyle();
     currentPlainText->setStyleSheet(outputColorActive);
     setArrowsStatus();
+    currentPlainText->setPlainText("");
 }
 void MainWindow::on_plainTextEdit_Num2_5_selectionChanged() {
     currentVecIndex = 10;
@@ -463,6 +487,7 @@ void MainWindow::on_plainTextEdit_Num2_5_selectionChanged() {
     setOutputStyle();
     currentPlainText->setStyleSheet(outputColorActive);
     setArrowsStatus();
+    currentPlainText->setPlainText("");
 }
 void MainWindow::on_plainTextEdit_Num2_6_selectionChanged() {
     currentVecIndex = 11;
@@ -470,6 +495,7 @@ void MainWindow::on_plainTextEdit_Num2_6_selectionChanged() {
     setOutputStyle();
     currentPlainText->setStyleSheet(outputColorActive);
     setArrowsStatus();
+    currentPlainText->setPlainText("");
 }
 
 void MainWindow::on_pushButton_Sum_pressed() {
@@ -545,16 +571,8 @@ void MainWindow::on_pushButton_Sub_clicked() {
 };
 void MainWindow::on_pushButton_Equal_clicked() {
     setSignStyle();
-
-    // num1 = ui->plainTextEdit_Num1_1->toPlainText().toStdString();
-    // num2 = ui->plainTextEdit_Num2_1->toPlainText().toStdString();
-    // system1 = ui->plainTextEdit_Num1_2->toPlainText().toInt();
-    // Num2_2 = ui->plainTextEdit_Num2_2->toPlainText().toInt();
-
+    ui->label_answerSign->setText("−"); //вот сюда знак ответа пихай
     std::string sign = currentSign.toStdString();
-
-    // Answer(num1Dec, num2Dec, sign);
-    // ui->plainTextEdit_Answer_1->setPlainText(answer_);
 };
 
 void MainWindow::on_pushButton_0_clicked() {

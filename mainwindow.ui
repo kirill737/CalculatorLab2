@@ -399,7 +399,7 @@ background-color: rgb(189, 187, 190);
     <property name="geometry">
      <rect>
       <x>60</x>
-      <y>160</y>
+      <y>140</y>
       <width>31</width>
       <height>31</height>
      </rect>
@@ -448,7 +448,7 @@ background-color: rgb(189, 187, 190);
     <property name="geometry">
      <rect>
       <x>60</x>
-      <y>100</y>
+      <y>80</y>
       <width>31</width>
       <height>31</height>
      </rect>
@@ -477,7 +477,7 @@ background-color: rgb(189, 187, 190);
     <property name="geometry">
      <rect>
       <x>180</x>
-      <y>60</y>
+      <y>40</y>
       <width>71</width>
       <height>50</height>
      </rect>
@@ -508,7 +508,7 @@ background-color: rgb(189, 187, 190);
     <property name="geometry">
      <rect>
       <x>260</x>
-      <y>60</y>
+      <y>40</y>
       <width>71</width>
       <height>50</height>
      </rect>
@@ -539,7 +539,7 @@ background-color: rgb(189, 187, 190);
     <property name="geometry">
      <rect>
       <x>340</x>
-      <y>60</y>
+      <y>40</y>
       <width>71</width>
       <height>50</height>
      </rect>
@@ -570,7 +570,7 @@ background-color: rgb(189, 187, 190);
     <property name="geometry">
      <rect>
       <x>420</x>
-      <y>60</y>
+      <y>40</y>
       <width>71</width>
       <height>50</height>
      </rect>
@@ -601,7 +601,7 @@ background-color: rgb(189, 187, 190);
     <property name="geometry">
      <rect>
       <x>500</x>
-      <y>60</y>
+      <y>40</y>
       <width>71</width>
       <height>50</height>
      </rect>
@@ -632,7 +632,7 @@ background-color: rgb(189, 187, 190);
     <property name="geometry">
      <rect>
       <x>260</x>
-      <y>120</y>
+      <y>100</y>
       <width>71</width>
       <height>50</height>
      </rect>
@@ -663,7 +663,7 @@ background-color: rgb(189, 187, 190);
     <property name="geometry">
      <rect>
       <x>420</x>
-      <y>120</y>
+      <y>100</y>
       <width>71</width>
       <height>50</height>
      </rect>
@@ -694,7 +694,7 @@ background-color: rgb(189, 187, 190);
     <property name="geometry">
      <rect>
       <x>340</x>
-      <y>120</y>
+      <y>100</y>
       <width>71</width>
       <height>50</height>
      </rect>
@@ -725,7 +725,7 @@ background-color: rgb(189, 187, 190);
     <property name="geometry">
      <rect>
       <x>180</x>
-      <y>120</y>
+      <y>100</y>
       <width>71</width>
       <height>50</height>
      </rect>
@@ -756,7 +756,7 @@ background-color: rgb(189, 187, 190);
     <property name="geometry">
      <rect>
       <x>500</x>
-      <y>120</y>
+      <y>100</y>
       <width>71</width>
       <height>50</height>
      </rect>
@@ -787,7 +787,7 @@ background-color: rgb(189, 187, 190);
     <property name="geometry">
      <rect>
       <x>100</x>
-      <y>120</y>
+      <y>100</y>
       <width>71</width>
       <height>50</height>
      </rect>
@@ -818,7 +818,7 @@ background-color: rgb(189, 187, 190);
     <property name="geometry">
      <rect>
       <x>260</x>
-      <y>180</y>
+      <y>170</y>
       <width>71</width>
       <height>50</height>
      </rect>
@@ -849,7 +849,7 @@ background-color: rgb(189, 187, 190);
     <property name="geometry">
      <rect>
       <x>420</x>
-      <y>180</y>
+      <y>170</y>
       <width>71</width>
       <height>50</height>
      </rect>
@@ -880,7 +880,7 @@ background-color: rgb(189, 187, 190);
     <property name="geometry">
      <rect>
       <x>340</x>
-      <y>180</y>
+      <y>170</y>
       <width>71</width>
       <height>50</height>
      </rect>
@@ -911,7 +911,7 @@ background-color: rgb(189, 187, 190);
     <property name="geometry">
      <rect>
       <x>180</x>
-      <y>180</y>
+      <y>170</y>
       <width>71</width>
       <height>50</height>
      </rect>
@@ -942,7 +942,7 @@ background-color: rgb(189, 187, 190);
     <property name="geometry">
      <rect>
       <x>500</x>
-      <y>180</y>
+      <y>170</y>
       <width>71</width>
       <height>50</height>
      </rect>
@@ -973,7 +973,7 @@ background-color: rgb(189, 187, 190);
     <property name="geometry">
      <rect>
       <x>100</x>
-      <y>180</y>
+      <y>170</y>
       <width>71</width>
       <height>50</height>
      </rect>
@@ -1004,7 +1004,7 @@ background-color: rgb(189, 187, 190);
     <property name="geometry">
      <rect>
       <x>500</x>
-      <y>30</y>
+      <y>10</y>
       <width>71</width>
       <height>20</height>
      </rect>
@@ -1024,7 +1024,7 @@ background-color: rgb(189, 187, 190);
     <property name="geometry">
      <rect>
       <x>420</x>
-      <y>30</y>
+      <y>10</y>
       <width>71</width>
       <height>20</height>
      </rect>
@@ -1044,7 +1044,7 @@ background-color: rgb(189, 187, 190);
     <property name="geometry">
      <rect>
       <x>340</x>
-      <y>30</y>
+      <y>10</y>
       <width>71</width>
       <height>20</height>
      </rect>
@@ -1064,7 +1064,7 @@ background-color: rgb(189, 187, 190);
     <property name="geometry">
      <rect>
       <x>260</x>
-      <y>30</y>
+      <y>10</y>
       <width>71</width>
       <height>20</height>
      </rect>
@@ -1084,7 +1084,7 @@ background-color: rgb(189, 187, 190);
     <property name="geometry">
      <rect>
       <x>180</x>
-      <y>30</y>
+      <y>10</y>
       <width>71</width>
       <height>20</height>
      </rect>
@@ -1104,7 +1104,7 @@ background-color: rgb(189, 187, 190);
     <property name="geometry">
      <rect>
       <x>100</x>
-      <y>30</y>
+      <y>10</y>
       <width>71</width>
       <height>20</height>
      </rect>
@@ -1124,7 +1124,7 @@ background-color: rgb(189, 187, 190);
     <property name="geometry">
      <rect>
       <x>100</x>
-      <y>60</y>
+      <y>40</y>
       <width>71</width>
       <height>50</height>
      </rect>
@@ -1148,6 +1148,25 @@ background-color: rgb(189, 187, 190);
      <bool>false</bool>
     </property>
     <property name="placeholderText">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_answerSign">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>170</y>
+      <width>31</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Segoe UI Symbol</family>
+      <pointsize>26</pointsize>
+     </font>
+    </property>
+    <property name="text">
      <string/>
     </property>
    </widget>
