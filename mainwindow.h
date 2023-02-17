@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include <QPlainTextEdit>
+// #include <QPushButton>
 #include <vector>
 #include <QPalette>
 #include <string>
@@ -21,8 +22,12 @@ class MainWindow : public QMainWindow
 //         NumButton();
 //         NumButton(QString name, QString clicked, QString pressed, QString def);
 //         ~NumButton();
-//         QString getName();
-//         void setStyle(QString style);
+//         QString getName() {
+//             return name_;
+//         };
+//         void setStyle(QString style) {
+//             planeTextEdit_->setStyleSheet(style);
+//         };
 //         void on_pushButton_planeTextEdit__clicked() {
 //             planeTextEdit_->setStyleSheet(clickedStyle);
 //         }
@@ -46,14 +51,15 @@ private:
     Ui::MainWindow *ui;
     QPlainTextEdit *currentPlainText;
     int currentVecIndex = 0;
-    QString currentSign;
-    std::string num1 = "", num2 = "";
-    int system1 = 0, system2 = 0;
+    QString currentSign = "";
     std::vector<QPlainTextEdit*> vec;
+    std::vector<QPlainTextEdit*> vec_ans;
+
     
 
 private slots:
     void Answer(int a, int b, std::string sign);
+    void fillVectors();
 
     void setSignStyle();
     void setNumStyle();
@@ -65,6 +71,7 @@ private slots:
     void unblockLeft();
     void unblockRight();
 
+    
     void on_plainTextEdit_Num1_1_selectionChanged();
     void on_plainTextEdit_Num1_2_selectionChanged();
     void on_plainTextEdit_Num1_3_selectionChanged();

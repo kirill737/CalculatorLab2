@@ -9,7 +9,6 @@ QString signColorOff = "border-radius: 20px;"
     "background-color: #F29C07 ;"
     "color: #FEFEFE;"
     "text-align: centre;";
-    // "border: none;"; 
 QString signColorOn = "border-radius: 20px;"
     "background-color:#FEFEFE ;"
     "color: #F29C07;"
@@ -17,16 +16,12 @@ QString signColorOn = "border-radius: 20px;"
 QString signColorPressed = "border-radius: 20px;"
     "background-color:#FBC98E ;"
     "color: #FEFFFE;";
-    // "border: none;"; 
 QString numColorPressed = "border-radius: 20px;"
     "background-color: #737373;"
     "color: #FEFEFE;";
-    // "border: none;"; 
 QString numColorOff = "border-radius: 20px;"
     "background-color: #333333;"
-    // "background-color: #6E6C6F;"
     "color: #FEFEFE;";
-    // "border: none;"; 
 QString numColorBlocked = "border-radius: 20px;"
     "background-color: #000000;"
     "color: #6E6C6F;"
@@ -34,7 +29,6 @@ QString numColorBlocked = "border-radius: 20px;"
 QString operationColorOff = "border-radius: 20px;"
     "background-color: #A5A5A5;"
     "color: #000000;";
-    // "border: none;"; 
 QString operationColorBlocked = "border-radius: 20px;"
     "border: 2px solid #A5A5A5;"
     "background-color: #000000;"
@@ -42,16 +36,13 @@ QString operationColorBlocked = "border-radius: 20px;"
 QString operationColorPressed = "border-radius: 20px;"
     "background-color: #D9D9D9;"
     "color: #000000;";
-    // "border: none;"; 
 QString outputColor = "border-radius: 5px;"
     "background-color: #333333;"
     "color: #FFFFFF;";
-    // "border-style: outset;";
 QString outputColorActive = "border-radius: 5px;"
     "background-color: #333333;"
     "color: #FFFFFF;"
     "border: 2px solid white;";
-    // "border-style: outset;";
 QString outputColorError = "border-radius: 5px;"
     "background-color: #333333;"
     "color: #FFFFFF;"
@@ -71,12 +62,6 @@ std::map<char, int> Alfabet(){
     m['7'] = 7;
     m['8'] = 8;
     m['9'] = 9;
-    m['A'] = 10;
-    m['B'] = 11;
-    m['C'] = 12;
-    m['D'] = 13;
-    m['E'] = 14;
-    m['F'] = 15;
     return m;
 };
 
@@ -93,30 +78,6 @@ static std::map<char, int> alfabet_ = std::move(Alfabet());
 static std::map<std::string, int> signs_ = std::move(Signs());
 
 QString answer_;
-
-long long Pow(int a, int n) { //возведение в степень
-	if (n == 0) return 1;
-	if (n % 2 == 0)	
-        return Pow((a * a), n / 2);
-	else
-		return (a * Pow(a, n - 1));
-}
-
-long long To_dec(std::string num, int sys) { //перевод в десятичную СС
-	long long res = 0;
-	for (int i = 0; i < num.length(); i++) {
-        if(num[num.length() - i - 1] != '0')
-		    res += alfabet_[num[num.length() - i - 1]] * Pow(sys, i);
-	}
-	return res;
-}
-
-bool Sys_check(std::string num, int sys) { //проверка принадлежности числа своей СС
-	for (int i = 0; i < num.length(); i++) {
-		if (alfabet_[num[i]] >= sys) return false;
-	}
-	return true;
-}
 
 bool Date_check(std::pair<std::string, std::vector<int>> tmp) { //проверка введенной даты на корректность
 	return !(tmp.second[5] > 59 || tmp.second[4] > 59 || tmp.second[3] > 23 || tmp.second[2] > 6 || tmp.second[1] > 52 || tmp.second[5] < 0 || tmp.second[4] < 0 || tmp.second[3]<0 || tmp.second[2]<0 || tmp.second[1]<0 || tmp.second[0]<0);
@@ -220,8 +181,9 @@ std::pair<std::string, std::vector<int>> minus(std::pair<std::string, std::vecto
 
 MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWindow) {
     ui->setupUi(this);
+    fillVectors();
     setDefaultSettings();
-    ui->textEdit->setStyleSheet(outputColorError);
+    // NumButton but1("num1", numColorOff, numColorPressed, numColorOff);
 }
 
 MainWindow::~MainWindow() {
@@ -248,21 +210,9 @@ void MainWindow::Answer(int a, int b, std::string sign) { //подсчет от�
     }
 }
 
-void MainWindow::setDefaultSettings() {
+void MainWindow::fillVectors() {
     vec.clear();
-    ui->label_2->setAlignment(Qt::AlignCenter);
-    ui->label_3->setAlignment(Qt::AlignCenter);
-    ui->label_4->setAlignment(Qt::AlignCenter);
-    ui->label_5->setAlignment(Qt::AlignCenter);
-    ui->label_6->setAlignment(Qt::AlignCenter);
-    ui->label_7->setAlignment(Qt::AlignCenter);
-    ui->label_2->setStyleSheet("color: #FFFFFF;");
-    ui->label_3->setStyleSheet("color: #FFFFFF;");
-    ui->label_4->setStyleSheet("color: #FFFFFF;");
-    ui->label_5->setStyleSheet("color: #FFFFFF;");
-    ui->label_6->setStyleSheet("color: #FFFFFF;");
-    ui->label_7->setStyleSheet("color: #FFFFFF;");
-    
+    vec_ans.clear();
     vec.push_back(ui->plainTextEdit_Num1_1);
     vec.push_back(ui->plainTextEdit_Num1_2);
     vec.push_back(ui->plainTextEdit_Num1_3);
@@ -275,45 +225,54 @@ void MainWindow::setDefaultSettings() {
     vec.push_back(ui->plainTextEdit_Num2_4);
     vec.push_back(ui->plainTextEdit_Num2_5);
     vec.push_back(ui->plainTextEdit_Num2_6);
+
+    vec_ans.push_back(ui->plainTextEdit_Answer_1);
+    vec_ans.push_back(ui->plainTextEdit_Answer_2);
+    vec_ans.push_back(ui->plainTextEdit_Answer_3);
+    vec_ans.push_back(ui->plainTextEdit_Answer_4);
+    vec_ans.push_back(ui->plainTextEdit_Answer_5);
+    vec_ans.push_back(ui->plainTextEdit_Answer_6);
+}
+void MainWindow::setDefaultSettings() {
+    
+    ui->label_2->setAlignment(Qt::AlignCenter);
+    ui->label_3->setAlignment(Qt::AlignCenter);
+    ui->label_4->setAlignment(Qt::AlignCenter);
+    ui->label_5->setAlignment(Qt::AlignCenter);
+    ui->label_6->setAlignment(Qt::AlignCenter);
+    ui->label_7->setAlignment(Qt::AlignCenter);
+    ui->label_2->setStyleSheet("color: #FFFFFF;");
+    ui->label_3->setStyleSheet("color: #FFFFFF;");
+    ui->label_4->setStyleSheet("color: #FFFFFF;");
+    ui->label_5->setStyleSheet("color: #FFFFFF;");
+    ui->label_6->setStyleSheet("color: #FFFFFF;");
+    ui->label_7->setStyleSheet("color: #FFFFFF;");
+
     currentVecIndex = 0;
     currentPlainText = vec[currentVecIndex];
+    currentPlainText->setStyleSheet(outputColorActive);
     currentPlainText->setStyleSheet(outputColorActive);
 
     setSignStyle();
     setNumStyle();
     setOutputStyle();
-
     ui->label_Sign->setStyleSheet(signColor);
-    ui->label_answerSign->setStyleSheet(signColor);
-    ui->plainTextEdit_Answer_1->setStyleSheet(outputColor);
-    ui->label->setStyleSheet("color: #FFFFFF;");
-    currentPlainText->setStyleSheet(outputColorActive);
-
-    ui->label->setAlignment(Qt::AlignCenter);
     ui->label_Sign->setAlignment(Qt::AlignCenter);
+    ui->label_Sign->setText("");
+    ui->label_answerSign->setStyleSheet(signColor);
     ui->label_answerSign->setAlignment(Qt::AlignCenter);
-
+    ui->label->setStyleSheet("color: #FFFFFF;");
+    ui->label->setAlignment(Qt::AlignCenter);
     setArrowsStatus();
+    
 }
 void MainWindow::setOutputStyle() {
-    ui->plainTextEdit_Num1_1->setStyleSheet(outputColor);
-    ui->plainTextEdit_Num1_2->setStyleSheet(outputColor);
-    ui->plainTextEdit_Num1_3->setStyleSheet(outputColor);
-    ui->plainTextEdit_Num1_4->setStyleSheet(outputColor);
-    ui->plainTextEdit_Num1_5->setStyleSheet(outputColor);
-    ui->plainTextEdit_Num1_6->setStyleSheet(outputColor);
-    ui->plainTextEdit_Num2_1->setStyleSheet(outputColor);
-    ui->plainTextEdit_Num2_2->setStyleSheet(outputColor);
-    ui->plainTextEdit_Num2_3->setStyleSheet(outputColor);
-    ui->plainTextEdit_Num2_4->setStyleSheet(outputColor);
-    ui->plainTextEdit_Num2_5->setStyleSheet(outputColor);
-    ui->plainTextEdit_Num2_6->setStyleSheet(outputColor);
-    ui->plainTextEdit_Answer_1->setStyleSheet(outputColor);
-    ui->plainTextEdit_Answer_2->setStyleSheet(outputColor);
-    ui->plainTextEdit_Answer_3->setStyleSheet(outputColor);
-    ui->plainTextEdit_Answer_4->setStyleSheet(outputColor);
-    ui->plainTextEdit_Answer_5->setStyleSheet(outputColor);
-    ui->plainTextEdit_Answer_6->setStyleSheet(outputColor);
+    for (int i = 0; i < 12; i++) {
+        vec[i]->setStyleSheet(outputColor);
+    }
+    for (int i = 0; i < 6; i++) {
+        vec_ans[i]->setStyleSheet(outputColor);
+    }
 }
 void MainWindow::setNumStyle() {
     ui->pushButton_0->setStyleSheet(numColorOff);
@@ -338,6 +297,7 @@ void MainWindow::setNumStyle() {
 }
 void MainWindow::setSignStyle() {
     this->setStyleSheet(mainWindowColor);
+    ui->label_answerSign->setText("");
     ui->pushButton_Sub->setStyleSheet(signColorOff);
     ui->pushButton_Sum->setStyleSheet(signColorOff);
     ui->pushButton_Equal->setStyleSheet(signColorOff);
@@ -361,18 +321,7 @@ void MainWindow::unblockRight() {
 }
 
 void MainWindow::setArrowsStatus() {
-    ui->plainTextEdit_Num1_1->setPlainText("0");
-    ui->plainTextEdit_Num1_2->setPlainText("0");
-    ui->plainTextEdit_Num1_3->setPlainText("0");
-    ui->plainTextEdit_Num1_4->setPlainText("0");
-    ui->plainTextEdit_Num1_5->setPlainText("0");
-    ui->plainTextEdit_Num1_6->setPlainText("0");
-    ui->plainTextEdit_Num2_1->setPlainText("0");
-    ui->plainTextEdit_Num2_2->setPlainText("0");
-    ui->plainTextEdit_Num2_3->setPlainText("0");
-    ui->plainTextEdit_Num2_4->setPlainText("0");
-    ui->plainTextEdit_Num2_5->setPlainText("0");
-    ui->plainTextEdit_Num2_6->setPlainText("0");
+
     currentPlainText = vec[currentVecIndex];
     currentPlainText->setStyleSheet(outputColorActive);
     switch (currentVecIndex)
@@ -406,7 +355,6 @@ void MainWindow::on_plainTextEdit_Num1_1_selectionChanged() {
     setOutputStyle();
     currentPlainText->setStyleSheet(outputColorActive);
     setArrowsStatus();
-    currentPlainText->setPlainText("");
 }
 void MainWindow::on_plainTextEdit_Num1_2_selectionChanged() {
     currentVecIndex = 1;
@@ -414,7 +362,6 @@ void MainWindow::on_plainTextEdit_Num1_2_selectionChanged() {
     setOutputStyle();
     currentPlainText->setStyleSheet(outputColorActive);
     setArrowsStatus();
-    currentPlainText->setPlainText("");
 }
 void MainWindow::on_plainTextEdit_Num1_3_selectionChanged() {
     currentVecIndex = 2;
@@ -422,7 +369,6 @@ void MainWindow::on_plainTextEdit_Num1_3_selectionChanged() {
     setOutputStyle();
     currentPlainText->setStyleSheet(outputColorActive);
     setArrowsStatus();
-    currentPlainText->setPlainText("");
 }
 void MainWindow::on_plainTextEdit_Num1_4_selectionChanged() {
     currentVecIndex = 3;
@@ -430,7 +376,6 @@ void MainWindow::on_plainTextEdit_Num1_4_selectionChanged() {
     setOutputStyle();
     currentPlainText->setStyleSheet(outputColorActive);
     setArrowsStatus();
-    currentPlainText->setPlainText("");
 }
 void MainWindow::on_plainTextEdit_Num1_5_selectionChanged() {
     currentVecIndex = 4;
@@ -438,7 +383,6 @@ void MainWindow::on_plainTextEdit_Num1_5_selectionChanged() {
     setOutputStyle();
     currentPlainText->setStyleSheet(outputColorActive);
     setArrowsStatus();
-    currentPlainText->setPlainText("");
 }
 void MainWindow::on_plainTextEdit_Num1_6_selectionChanged() {
     currentVecIndex = 5;
@@ -446,7 +390,6 @@ void MainWindow::on_plainTextEdit_Num1_6_selectionChanged() {
     setOutputStyle();
     currentPlainText->setStyleSheet(outputColorActive);
     setArrowsStatus();
-    currentPlainText->setPlainText("");
 }
 
 void MainWindow::on_plainTextEdit_Num2_1_selectionChanged() {
@@ -455,7 +398,6 @@ void MainWindow::on_plainTextEdit_Num2_1_selectionChanged() {
     setOutputStyle();
     currentPlainText->setStyleSheet(outputColorActive);
     setArrowsStatus();
-    currentPlainText->setPlainText("");
 }
 void MainWindow::on_plainTextEdit_Num2_2_selectionChanged() {
     currentVecIndex = 7;
@@ -463,7 +405,6 @@ void MainWindow::on_plainTextEdit_Num2_2_selectionChanged() {
     setOutputStyle();
     currentPlainText->setStyleSheet(outputColorActive);
     setArrowsStatus();
-    currentPlainText->setPlainText("");
 }
 void MainWindow::on_plainTextEdit_Num2_3_selectionChanged() {
     currentVecIndex = 8;
@@ -471,7 +412,6 @@ void MainWindow::on_plainTextEdit_Num2_3_selectionChanged() {
     setOutputStyle();
     currentPlainText->setStyleSheet(outputColorActive);
     setArrowsStatus();
-    currentPlainText->setPlainText("");
 }
 void MainWindow::on_plainTextEdit_Num2_4_selectionChanged() {
     currentVecIndex = 9;
@@ -479,7 +419,6 @@ void MainWindow::on_plainTextEdit_Num2_4_selectionChanged() {
     setOutputStyle();
     currentPlainText->setStyleSheet(outputColorActive);
     setArrowsStatus();
-    currentPlainText->setPlainText("");
 }
 void MainWindow::on_plainTextEdit_Num2_5_selectionChanged() {
     currentVecIndex = 10;
@@ -487,7 +426,6 @@ void MainWindow::on_plainTextEdit_Num2_5_selectionChanged() {
     setOutputStyle();
     currentPlainText->setStyleSheet(outputColorActive);
     setArrowsStatus();
-    currentPlainText->setPlainText("");
 }
 void MainWindow::on_plainTextEdit_Num2_6_selectionChanged() {
     currentVecIndex = 11;
@@ -495,7 +433,6 @@ void MainWindow::on_plainTextEdit_Num2_6_selectionChanged() {
     setOutputStyle();
     currentPlainText->setStyleSheet(outputColorActive);
     setArrowsStatus();
-    currentPlainText->setPlainText("");
 }
 
 void MainWindow::on_pushButton_Sum_pressed() {
@@ -509,30 +446,19 @@ void MainWindow::on_pushButton_Equal_pressed() {
 };
 
 void MainWindow::on_pushButton_ClearAll_clicked() {
-    ui->plainTextEdit_Num1_1->setPlainText("0");
-    ui->plainTextEdit_Num1_2->setPlainText("0");
-    ui->plainTextEdit_Num1_3->setPlainText("0");
-    ui->plainTextEdit_Num1_4->setPlainText("0");
-    ui->plainTextEdit_Num1_5->setPlainText("0");
-    ui->plainTextEdit_Num1_6->setPlainText("0");
-    ui->plainTextEdit_Num2_1->setPlainText("0");
-    ui->plainTextEdit_Num2_2->setPlainText("0");
-    ui->plainTextEdit_Num2_3->setPlainText("0");
-    ui->plainTextEdit_Num2_4->setPlainText("0");
-    ui->plainTextEdit_Num2_5->setPlainText("0");
-    ui->plainTextEdit_Num2_6->setPlainText("0");
     ui->label_Sign->setText("");
-    ui->plainTextEdit_Answer_1->setPlainText("");
-    ui->plainTextEdit_Answer_2->setPlainText("");
-    ui->plainTextEdit_Answer_3->setPlainText("");
-    ui->plainTextEdit_Answer_4->setPlainText("");
-    ui->plainTextEdit_Answer_5->setPlainText("");
-    ui->plainTextEdit_Answer_6->setPlainText("");
+    for (int i = 0; i < 6; i++) {
+        vec_ans[i]->setPlainText("");
+    }
+    for (int i = 0; i < 12; i++) {
+        vec[i]->setPlainText("");
+    }
     setDefaultSettings();
 };
 void MainWindow::on_pushButton_Right_clicked() {
     currentVecIndex++;
     setArrowsStatus();
+    
 }
 void MainWindow::on_pushButton_Left_clicked() {
     currentVecIndex--;
@@ -569,10 +495,86 @@ void MainWindow::on_pushButton_Sub_clicked() {
     setSignStyle();
     ui->pushButton_Sub->setStyleSheet(signColorOn);
 };
+// void MainWindow::on_pushButton_Equal_clicked() {
+//     setSignStyle();
+//     ui->label_answerSign->setText("−"); //вот сюда знак ответа пихай
+//     std::string sign = currentSign.toStdString();
+// };
+int Sec(std::vector<int>& vec) {
+    return vec[5] + 60 * vec[4] + 3600 * vec[3] + 24 * 3600 * vec[2] + 7 * 24 * 3600 * vec[1] + 365 * 7 * 24 * 3600 * vec[0];
+}
+
+void Normalize(std::vector<int>& vec) {
+    int time = Sec(vec);
+    vec[0] = time / (365 * 7 * 24 * 3600);
+    time -= vec[0] * (365 * 7 * 24 * 3600);
+    vec[1] = time / (7 * 24 * 3600);
+    time -= vec[1] * (7 * 24 * 3600);
+    vec[2] = time / (24 * 3600);
+    time -= vec[2] * (24 * 3600);
+    vec[3] = time / 3600;
+    time -= vec[3] * 3600;
+    vec[4] = time / 60;
+    time -= vec[4] * 60;
+    vec[5] = time;
+}
+std::vector<int> normalize(int time) {
+    std::vector<int> vec(6);
+    vec[0] = time / (365 * 7 * 24 * 3600);
+    time -= vec[0] * (365 * 7 * 24 * 3600);
+    vec[1] = time / (7 * 24 * 3600);
+    time -= vec[1] * (7 * 24 * 3600);
+    vec[2] = time / (24 * 3600);
+    time -= vec[2] * (24 * 3600);
+    vec[3] = time / 3600;
+    time -= vec[3] * 3600;
+    vec[4] = time / 60;
+    time -= vec[4] * 60;
+    vec[5] = time;
+    return vec;
+}
 void MainWindow::on_pushButton_Equal_clicked() {
+    if (ui->label_Sign->text() == "") {
+        currentSign = "+";
+        ui->label_Sign->setText(currentSign);
+        ui->pushButton_Sum->setStyleSheet(signColorOn);
+    }
     setSignStyle();
-    ui->label_answerSign->setText("−"); //вот сюда знак ответа пихай
-    std::string sign = currentSign.toStdString();
+    std::vector<int> num1;
+    for (int i = 0; i < 6; i++) {
+        num1.push_back(vec[i]->toPlainText().toInt());
+    }
+    Normalize(num1);
+    for (int i = 0; i < 6; i++) {
+        vec[i]->setPlainText(QString::number(num1[i]));
+    }
+
+    std::vector<int> num2;
+    for (int i = 6; i < 12; i++) {
+        num2.push_back(vec[i]->toPlainText().toInt());
+    }
+    Normalize(num2);
+    for (int i = 0; i < 6; i++) {
+        vec[i + 6]->setPlainText(QString::number(num2[i]));
+    }
+
+    if ((currentSign == "+") || (currentSign == "")) {
+        num1 = std::move(normalize(Sec(num1) + Sec(num2)));
+    }
+    else {
+        int secs = Sec(num1) - Sec(num2);
+        if (secs < 0) {
+            ui->label_answerSign->setText("−");
+            secs *= -1;
+        }
+        else {
+            ui->label_answerSign->setText("");
+        }
+        num1 = std::move(normalize(secs));
+    }
+    for (int i = 0; i < 6; i++) {
+        vec_ans[i]->setPlainText(QString::number(num1[i]));
+    }
 };
 
 void MainWindow::on_pushButton_0_clicked() {

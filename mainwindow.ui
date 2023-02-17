@@ -6,9 +6,21 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>612</width>
-    <height>703</height>
+    <width>540</width>
+    <height>700</height>
    </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>540</width>
+    <height>700</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>540</width>
+    <height>700</height>
+   </size>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
@@ -26,7 +38,7 @@ border: none;
     <property name="geometry">
      <rect>
       <x>130</x>
-      <y>330</y>
+      <y>320</y>
       <width>70</width>
       <height>70</height>
      </rect>
@@ -45,7 +57,7 @@ border: none;
     <property name="geometry">
      <rect>
       <x>210</x>
-      <y>330</y>
+      <y>320</y>
       <width>70</width>
       <height>70</height>
      </rect>
@@ -64,7 +76,7 @@ border: none;
     <property name="geometry">
      <rect>
       <x>290</x>
-      <y>330</y>
+      <y>320</y>
       <width>70</width>
       <height>70</height>
      </rect>
@@ -86,7 +98,7 @@ border: none;
     <property name="geometry">
      <rect>
       <x>130</x>
-      <y>410</y>
+      <y>400</y>
       <width>70</width>
       <height>70</height>
      </rect>
@@ -105,7 +117,7 @@ border: none;
     <property name="geometry">
      <rect>
       <x>210</x>
-      <y>410</y>
+      <y>400</y>
       <width>70</width>
       <height>70</height>
      </rect>
@@ -124,7 +136,7 @@ border: none;
     <property name="geometry">
      <rect>
       <x>290</x>
-      <y>410</y>
+      <y>400</y>
       <width>70</width>
       <height>70</height>
      </rect>
@@ -143,7 +155,7 @@ border: none;
     <property name="geometry">
      <rect>
       <x>130</x>
-      <y>490</y>
+      <y>480</y>
       <width>70</width>
       <height>70</height>
      </rect>
@@ -162,7 +174,7 @@ border: none;
     <property name="geometry">
      <rect>
       <x>210</x>
-      <y>490</y>
+      <y>480</y>
       <width>70</width>
       <height>70</height>
      </rect>
@@ -181,7 +193,7 @@ border: none;
     <property name="geometry">
      <rect>
       <x>290</x>
-      <y>490</y>
+      <y>480</y>
       <width>70</width>
       <height>70</height>
      </rect>
@@ -200,7 +212,7 @@ border: none;
     <property name="geometry">
      <rect>
       <x>370</x>
-      <y>330</y>
+      <y>320</y>
       <width>70</width>
       <height>111</height>
      </rect>
@@ -230,7 +242,7 @@ background-color: rgb(244, 190, 98);
     <property name="geometry">
      <rect>
       <x>370</x>
-      <y>449</y>
+      <y>439</y>
       <width>70</width>
       <height>111</height>
      </rect>
@@ -260,7 +272,7 @@ background-color: rgb(244, 190, 98);
     <property name="geometry">
      <rect>
       <x>130</x>
-      <y>250</y>
+      <y>240</y>
       <width>70</width>
       <height>70</height>
      </rect>
@@ -290,7 +302,7 @@ background-color: rgb(189, 187, 190);
     <property name="geometry">
      <rect>
       <x>130</x>
-      <y>570</y>
+      <y>560</y>
       <width>70</width>
       <height>70</height>
      </rect>
@@ -309,7 +321,7 @@ background-color: rgb(189, 187, 190);
     <property name="geometry">
      <rect>
       <x>210</x>
-      <y>570</y>
+      <y>560</y>
       <width>231</width>
       <height>70</height>
      </rect>
@@ -339,7 +351,7 @@ background-color: rgb(244, 190, 98);
     <property name="geometry">
      <rect>
       <x>210</x>
-      <y>250</y>
+      <y>240</y>
       <width>70</width>
       <height>70</height>
      </rect>
@@ -369,7 +381,7 @@ background-color: rgb(189, 187, 190);
     <property name="geometry">
      <rect>
       <x>290</x>
-      <y>250</y>
+      <y>240</y>
       <width>70</width>
       <height>70</height>
      </rect>
@@ -398,7 +410,7 @@ background-color: rgb(189, 187, 190);
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>60</x>
+      <x>10</x>
       <y>140</y>
       <width>31</width>
       <height>31</height>
@@ -418,7 +430,7 @@ background-color: rgb(189, 187, 190);
     <property name="geometry">
      <rect>
       <x>370</x>
-      <y>250</y>
+      <y>240</y>
       <width>70</width>
       <height>70</height>
      </rect>
@@ -447,7 +459,7 @@ background-color: rgb(189, 187, 190);
    <widget class="QLabel" name="label_Sign">
     <property name="geometry">
      <rect>
-      <x>60</x>
+      <x>10</x>
       <y>80</y>
       <width>31</width>
       <height>31</height>
@@ -463,20 +475,10 @@ background-color: rgb(189, 187, 190);
      <string>+</string>
     </property>
    </widget>
-   <widget class="QTextEdit" name="textEdit">
-    <property name="geometry">
-     <rect>
-      <x>450</x>
-      <y>250</y>
-      <width>131</width>
-      <height>391</height>
-     </rect>
-    </property>
-   </widget>
    <widget class="QPlainTextEdit" name="plainTextEdit_Num1_2">
     <property name="geometry">
      <rect>
-      <x>180</x>
+      <x>130</x>
       <y>40</y>
       <width>71</width>
       <height>50</height>
@@ -495,7 +497,7 @@ background-color: rgb(189, 187, 190);
      <bool>true</bool>
     </property>
     <property name="plainText">
-     <string>0</string>
+     <string/>
     </property>
     <property name="centerOnScroll">
      <bool>false</bool>
@@ -507,7 +509,7 @@ background-color: rgb(189, 187, 190);
    <widget class="QPlainTextEdit" name="plainTextEdit_Num1_3">
     <property name="geometry">
      <rect>
-      <x>260</x>
+      <x>210</x>
       <y>40</y>
       <width>71</width>
       <height>50</height>
@@ -526,7 +528,7 @@ background-color: rgb(189, 187, 190);
      <bool>true</bool>
     </property>
     <property name="plainText">
-     <string>0</string>
+     <string/>
     </property>
     <property name="centerOnScroll">
      <bool>false</bool>
@@ -538,7 +540,7 @@ background-color: rgb(189, 187, 190);
    <widget class="QPlainTextEdit" name="plainTextEdit_Num1_4">
     <property name="geometry">
      <rect>
-      <x>340</x>
+      <x>290</x>
       <y>40</y>
       <width>71</width>
       <height>50</height>
@@ -557,7 +559,7 @@ background-color: rgb(189, 187, 190);
      <bool>true</bool>
     </property>
     <property name="plainText">
-     <string>0</string>
+     <string/>
     </property>
     <property name="centerOnScroll">
      <bool>false</bool>
@@ -569,7 +571,7 @@ background-color: rgb(189, 187, 190);
    <widget class="QPlainTextEdit" name="plainTextEdit_Num1_5">
     <property name="geometry">
      <rect>
-      <x>420</x>
+      <x>370</x>
       <y>40</y>
       <width>71</width>
       <height>50</height>
@@ -588,7 +590,7 @@ background-color: rgb(189, 187, 190);
      <bool>true</bool>
     </property>
     <property name="plainText">
-     <string>0</string>
+     <string/>
     </property>
     <property name="centerOnScroll">
      <bool>false</bool>
@@ -600,7 +602,7 @@ background-color: rgb(189, 187, 190);
    <widget class="QPlainTextEdit" name="plainTextEdit_Num1_6">
     <property name="geometry">
      <rect>
-      <x>500</x>
+      <x>450</x>
       <y>40</y>
       <width>71</width>
       <height>50</height>
@@ -619,7 +621,7 @@ background-color: rgb(189, 187, 190);
      <bool>true</bool>
     </property>
     <property name="plainText">
-     <string>0</string>
+     <string/>
     </property>
     <property name="centerOnScroll">
      <bool>false</bool>
@@ -631,7 +633,7 @@ background-color: rgb(189, 187, 190);
    <widget class="QPlainTextEdit" name="plainTextEdit_Num2_3">
     <property name="geometry">
      <rect>
-      <x>260</x>
+      <x>210</x>
       <y>100</y>
       <width>71</width>
       <height>50</height>
@@ -650,7 +652,7 @@ background-color: rgb(189, 187, 190);
      <bool>true</bool>
     </property>
     <property name="plainText">
-     <string>0</string>
+     <string/>
     </property>
     <property name="centerOnScroll">
      <bool>false</bool>
@@ -662,7 +664,7 @@ background-color: rgb(189, 187, 190);
    <widget class="QPlainTextEdit" name="plainTextEdit_Num2_5">
     <property name="geometry">
      <rect>
-      <x>420</x>
+      <x>370</x>
       <y>100</y>
       <width>71</width>
       <height>50</height>
@@ -681,7 +683,7 @@ background-color: rgb(189, 187, 190);
      <bool>true</bool>
     </property>
     <property name="plainText">
-     <string>0</string>
+     <string/>
     </property>
     <property name="centerOnScroll">
      <bool>false</bool>
@@ -693,7 +695,7 @@ background-color: rgb(189, 187, 190);
    <widget class="QPlainTextEdit" name="plainTextEdit_Num2_4">
     <property name="geometry">
      <rect>
-      <x>340</x>
+      <x>290</x>
       <y>100</y>
       <width>71</width>
       <height>50</height>
@@ -712,7 +714,7 @@ background-color: rgb(189, 187, 190);
      <bool>true</bool>
     </property>
     <property name="plainText">
-     <string>0</string>
+     <string/>
     </property>
     <property name="centerOnScroll">
      <bool>false</bool>
@@ -724,7 +726,7 @@ background-color: rgb(189, 187, 190);
    <widget class="QPlainTextEdit" name="plainTextEdit_Num2_2">
     <property name="geometry">
      <rect>
-      <x>180</x>
+      <x>130</x>
       <y>100</y>
       <width>71</width>
       <height>50</height>
@@ -743,7 +745,7 @@ background-color: rgb(189, 187, 190);
      <bool>true</bool>
     </property>
     <property name="plainText">
-     <string>0</string>
+     <string/>
     </property>
     <property name="centerOnScroll">
      <bool>false</bool>
@@ -755,7 +757,7 @@ background-color: rgb(189, 187, 190);
    <widget class="QPlainTextEdit" name="plainTextEdit_Num2_6">
     <property name="geometry">
      <rect>
-      <x>500</x>
+      <x>450</x>
       <y>100</y>
       <width>71</width>
       <height>50</height>
@@ -774,7 +776,7 @@ background-color: rgb(189, 187, 190);
      <bool>true</bool>
     </property>
     <property name="plainText">
-     <string>0</string>
+     <string/>
     </property>
     <property name="centerOnScroll">
      <bool>false</bool>
@@ -786,7 +788,7 @@ background-color: rgb(189, 187, 190);
    <widget class="QPlainTextEdit" name="plainTextEdit_Num2_1">
     <property name="geometry">
      <rect>
-      <x>100</x>
+      <x>50</x>
       <y>100</y>
       <width>71</width>
       <height>50</height>
@@ -805,7 +807,7 @@ background-color: rgb(189, 187, 190);
      <bool>true</bool>
     </property>
     <property name="plainText">
-     <string>0</string>
+     <string/>
     </property>
     <property name="centerOnScroll">
      <bool>false</bool>
@@ -817,7 +819,7 @@ background-color: rgb(189, 187, 190);
    <widget class="QPlainTextEdit" name="plainTextEdit_Answer_3">
     <property name="geometry">
      <rect>
-      <x>260</x>
+      <x>210</x>
       <y>170</y>
       <width>71</width>
       <height>50</height>
@@ -848,7 +850,7 @@ background-color: rgb(189, 187, 190);
    <widget class="QPlainTextEdit" name="plainTextEdit_Answer_5">
     <property name="geometry">
      <rect>
-      <x>420</x>
+      <x>370</x>
       <y>170</y>
       <width>71</width>
       <height>50</height>
@@ -879,7 +881,7 @@ background-color: rgb(189, 187, 190);
    <widget class="QPlainTextEdit" name="plainTextEdit_Answer_4">
     <property name="geometry">
      <rect>
-      <x>340</x>
+      <x>290</x>
       <y>170</y>
       <width>71</width>
       <height>50</height>
@@ -910,7 +912,7 @@ background-color: rgb(189, 187, 190);
    <widget class="QPlainTextEdit" name="plainTextEdit_Answer_2">
     <property name="geometry">
      <rect>
-      <x>180</x>
+      <x>130</x>
       <y>170</y>
       <width>71</width>
       <height>50</height>
@@ -941,7 +943,7 @@ background-color: rgb(189, 187, 190);
    <widget class="QPlainTextEdit" name="plainTextEdit_Answer_6">
     <property name="geometry">
      <rect>
-      <x>500</x>
+      <x>450</x>
       <y>170</y>
       <width>71</width>
       <height>50</height>
@@ -972,7 +974,7 @@ background-color: rgb(189, 187, 190);
    <widget class="QPlainTextEdit" name="plainTextEdit_Answer_1">
     <property name="geometry">
      <rect>
-      <x>100</x>
+      <x>50</x>
       <y>170</y>
       <width>71</width>
       <height>50</height>
@@ -1003,7 +1005,7 @@ background-color: rgb(189, 187, 190);
    <widget class="QLabel" name="label_7">
     <property name="geometry">
      <rect>
-      <x>500</x>
+      <x>450</x>
       <y>10</y>
       <width>71</width>
       <height>20</height>
@@ -1023,7 +1025,7 @@ background-color: rgb(189, 187, 190);
    <widget class="QLabel" name="label_6">
     <property name="geometry">
      <rect>
-      <x>420</x>
+      <x>370</x>
       <y>10</y>
       <width>71</width>
       <height>20</height>
@@ -1043,7 +1045,7 @@ background-color: rgb(189, 187, 190);
    <widget class="QLabel" name="label_4">
     <property name="geometry">
      <rect>
-      <x>340</x>
+      <x>290</x>
       <y>10</y>
       <width>71</width>
       <height>20</height>
@@ -1063,7 +1065,7 @@ background-color: rgb(189, 187, 190);
    <widget class="QLabel" name="label_5">
     <property name="geometry">
      <rect>
-      <x>260</x>
+      <x>210</x>
       <y>10</y>
       <width>71</width>
       <height>20</height>
@@ -1083,7 +1085,7 @@ background-color: rgb(189, 187, 190);
    <widget class="QLabel" name="label_3">
     <property name="geometry">
      <rect>
-      <x>180</x>
+      <x>130</x>
       <y>10</y>
       <width>71</width>
       <height>20</height>
@@ -1103,7 +1105,7 @@ background-color: rgb(189, 187, 190);
    <widget class="QLabel" name="label_2">
     <property name="geometry">
      <rect>
-      <x>100</x>
+      <x>50</x>
       <y>10</y>
       <width>71</width>
       <height>20</height>
@@ -1123,7 +1125,7 @@ background-color: rgb(189, 187, 190);
    <widget class="QPlainTextEdit" name="plainTextEdit_Num1_1">
     <property name="geometry">
      <rect>
-      <x>100</x>
+      <x>50</x>
       <y>40</y>
       <width>71</width>
       <height>50</height>
@@ -1142,7 +1144,7 @@ background-color: rgb(189, 187, 190);
      <bool>true</bool>
     </property>
     <property name="plainText">
-     <string>0</string>
+     <string/>
     </property>
     <property name="centerOnScroll">
      <bool>false</bool>
@@ -1154,7 +1156,7 @@ background-color: rgb(189, 187, 190);
    <widget class="QLabel" name="label_answerSign">
     <property name="geometry">
      <rect>
-      <x>60</x>
+      <x>10</x>
       <y>170</y>
       <width>31</width>
       <height>31</height>
@@ -1176,7 +1178,7 @@ background-color: rgb(189, 187, 190);
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>612</width>
+     <width>540</width>
      <height>21</height>
     </rect>
    </property>
